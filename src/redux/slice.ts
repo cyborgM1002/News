@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   country: "in",
-  category: "sports",
+  category: "",
   pageNum: 1,
   loading: false,
 };

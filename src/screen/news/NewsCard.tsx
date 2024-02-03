@@ -1,5 +1,5 @@
-import { NewsCardType } from "../types/newsCard";
-import { FormatDate, FormatString } from "../utils/TextFormatter";
+import { NewsCardType } from "../../types/newsCard";
+import { FormatDate, FormatString } from "../../utils/TextFormatter";
 // source, publishedAt
 const NewsCard = ({
   title,
@@ -7,6 +7,7 @@ const NewsCard = ({
   content,
   publishedAt,
   source,
+  url,
 }: NewsCardType) => {
   return (
     <div className="w-sm h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -26,8 +27,15 @@ const NewsCard = ({
           <p className="mb-3 text-sm text-gray-700 dark:text-gray-400">
             {FormatString(content, 110)}
           </p>
+          <a
+            href={url}
+            target="_blank"
+            className="mt-2 text-sm text-gray-700 dark:text-gray-300"
+          >
+            Read more...
+          </a>
         </div>
-        <div className="w-full h1/5">
+        <div className="flex justify-between items-center w-full h1/5">
           <div className="text-gray-700 dark:text-gray-400">
             <span className="font-light text-xs">Source:</span>{" "}
             <span className="text-xs font-extralight">

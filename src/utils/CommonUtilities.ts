@@ -1,4 +1,13 @@
-export const countries = ["in", "us"];
+export const countries = [
+  {
+    code: "in",
+    value: "India",
+  },
+  {
+    code: "us",
+    value: "United States",
+  },
+];
 export const categories = [
   "entertainment",
   "general",
@@ -8,3 +17,5 @@ export const categories = [
   "technology",
   "bussiness",
 ];
+
+export const headlines = ["techcrunch"];
